@@ -7,9 +7,9 @@ Jest, Cypress, Puppeteer.
 
 1. *JSTesting\test-demo*
     1. [Test-Driven Development // Fun TDD Introduction with JavaScript -- Fireship](https://www.youtube.com/watch?v=Jv2uxzhPFl4)
-2. *********************************JSTesting\jest-testing*********************************
+2. *JSTesting\jest-testing*
     1. [Introduction To Testing In JavaScript With Jest -- Web Dev Simplified](https://www.youtube.com/watch?v=FgnxcUQ5vho) 
-3. *********************************JSTesting\js-testing-introduction*********************************
+3. *JSTesting\js-testing-introduction*
     1. [JavaScript Testing Introduction Tutorial - Unit Tests, Integration Tests & e2e Tests](https://www.youtube.com/watch?v=r9HdJ8P6GQI)
 
 ## **Why Test?**
