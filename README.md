@@ -1,29 +1,31 @@
 # js-testing
+
 Jest, Cypress, Puppeteer.
 
 # Testing
 
 **PROJECTS:**
 
-1. *JSTesting\test-demo*
+1. _JSTesting\test-demo_
     1. [Test-Driven Development // Fun TDD Introduction with JavaScript -- Fireship](https://www.youtube.com/watch?v=Jv2uxzhPFl4)
-2. *JSTesting\jest-testing*
-    1. [Introduction To Testing In JavaScript With Jest -- Web Dev Simplified](https://www.youtube.com/watch?v=FgnxcUQ5vho) 
-3. *JSTesting\js-testing-introduction*
+2. ******\*\*\*\*******\*******\*\*\*\*******JSTesting\jest-testing******\*\*\*\*******\*******\*\*\*\*******
+    1. [Introduction To Testing In JavaScript With Jest -- Web Dev Simplified](https://www.youtube.com/watch?v=FgnxcUQ5vho)
+3. ******\*\*\*\*******\*******\*\*\*\*******JSTesting\js-testing-introduction******\*\*\*\*******\*******\*\*\*\*******
     1. [JavaScript Testing Introduction Tutorial - Unit Tests, Integration Tests & e2e Tests](https://www.youtube.com/watch?v=r9HdJ8P6GQI)
+4. _JSTesting\React-Testing-Library-Net-Ninja_
+    1. [React Testing Library Tutorial - The Net Ninja](https://www.youtube.com/watch?v=7dTTFW7yACQ&list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ)
 
-## **Why Test?**
+## Why Tes**t?**
 
 1. Get an error if we break code
 2. save time
 3. think about possible bugs and issues
-4. integrate into build workflow
-5. break up complex dependencies - modular code, testing is easier
-6. **improve our code**
-7. Testovanie je dobré v prípade, keď meníme svoj kód a vedeli sme, že všetko funguje aj po zmene ako má. 
+4. break up complex dependencies - modular code, testing is easier
+5. **improve our code**
+6. Testovanie je dobré v prípade, keď meníme svoj kód a vieme, že všetko funguje aj po zmene ako má.
     1. Keď testy prejdú tak je všetko v poriadku
     2. Ak testy neprejdú niečo sa pokazilo a vieme, kde to máme opraviť
-8. **Automatické testovanie nám uľahčuje prácu** s tým, že nemusíme manuálne kontrolovať všetky funkcie pred deploynutím do production appky
+7. **Automatické testovanie nám uľahčuje prácu** s tým, že nemusíme manuálne kontrolovať všetky funkcie pred deploynutím do production appky
 
 ## Jest
 
@@ -31,9 +33,9 @@ Jest, Cypress, Puppeteer.
 
 [https://docs.expo.dev/guides/testing-with-jest/](https://docs.expo.dev/guides/testing-with-jest/)
 
-- Jest is **extremely popular** and ****************powerful**************** testing framework for javascript
-    - because it is also **test runner (e.g. Mocha)** and has assertation libary **(e.g. Chai) in ONE testing framework**
-    - really powerful and fun to work with
+-   Jest is **extremely popular** and **\*\***\*\*\*\***\*\***powerful**\*\***\*\*\*\***\*\*** testing framework for javascript
+    -   because it is also **test runner (e.g. Mocha)** and has assertation libary **(e.g. Chai) in ONE testing framework**
+    -   really powerful and fun to work with
 
 ### **Test-Driven Development (TDD)**
 
@@ -47,39 +49,39 @@ Error → Passed → Refactor/optimize
 
 **Unit Tests** - easy - write thousands of these
 
-- A unit test is used to check the **smallest unit of code**, usually a function.
-- Short and simple
-- We want to check one single thing at a time (mostly a function)
-- e.g. techs: **Jest,** Mocha
+-   A unit test is used to check the **smallest unit of code**, usually a function.
+-   Short and simple
+-   We want to check one single thing at a time (mostly a function)
+-   e.g. techs: **Jest,** Mocha, …
 
 **Integration Tests** - medium - write a good couple of these
 
-- with dependencies
-- result of a function depends on another function
-- e.g. techs: **Jest,** Chai
+-   with dependencies
+-   result of a function depends on another function
+-   e.g. techs: **Jest,** Chai, …
 
 **End-to-End Testing (best one probably)** - complex - write a few of these
 
-- full flow
-    - validating the DOM after a click
-- simulate actual user behaviour
-- Complex integrations
-- e.g. techs: **Puppeteer, Cypress**
+-   full flow
+    -   validating the DOM after a click
+-   simulate actual user behaviour
+-   Complex integrations
+-   e.g. techs: **Puppeteer, Cypress**
 
 ### Non-functional testing
 
-- Performance
-- Usability
-- Security
-- Stress testing
+-   Performance
+-   Usability
+-   Security
+-   Stress testing
 
 ### Question: Implement a STACK without using a JS array
 
-- Tech: **Vitejs, Cypress, Jest**
+-   Tech: **Vitejs, Cypress, Jest**
 
-**Vite** 
+**Vite**
 
-- is a build tool that aims to provide a faster and leaner development experience for modern web projects.
+-   is a build tool that aims to provide a faster and leaner development experience for modern web projects.
 
 ```jsx
 npm create vite@latest
@@ -89,14 +91,14 @@ npm install --save-dev jest // only in development dependencies of our project
 
 **Jest**
 
-- watchwatchAll
-    - Watch files for changes and rerun all tests when something changes
-- watch
-    - If you want to re-run only the tests that depend on the changed files
-- verbose
-    - Display individual test results with the test suite hierarchy.
-- coverage
-    - Indicates that test coverage information should be collected and reported in the output.
+-   watchwatchAll
+    -   Watch files for changes and rerun all tests when something changes
+-   watch
+    -   If you want to re-run only the tests that depend on the changed files
+-   verbose
+    -   Display individual test results with the test suite hierarchy.
+-   coverage
+    -   Indicates that test coverage information should be collected and reported in the output.
 
 ```jsx
 // package.json
@@ -132,12 +134,13 @@ class Stack(){
 }
 
 // Alternative
-test('creates empty stack', () => {
-	epexct(stack.top).toBe(-1);
+test('creates empty stack', () => { // Test Suite
+	epexct(stack.top).toBe(-1); // Assertion
 });
 
-// Test suite
-describe('My Stack', () => { 
+// Test suite - Describe Blocks
+// Good way to organize our test blocks.
+describe('My Stack', () => {
 	// Global variable for all tests.
 	let stack;
 
@@ -150,7 +153,7 @@ describe('My Stack', () => {
 	});
 
 	it('is created empty', () => { // Individual unit tests
-		expect(stack.top).toBe(-1); // Expectation.
+		expect(stack.top).toBe(-1); // Expectation/Assertion.
 		expect(stack.items).toEqual({});
 	});
 	// ...
@@ -162,15 +165,15 @@ describe('My Stack', () => {
 npm test
 ```
 
-**************Cypress**************
+**\*\***\*\***\*\***Cypress**\*\***\*\***\*\***
 
-- End-to-End visual testing
-- Behaves like an end user.
+-   End-to-End visual testing
+-   Behaves like an end user.
 
 **Puppeteer**
 
-- e2e testing
-- headless version of chrome browser
+-   e2e testing
+-   headless version of chrome browser
 
 ```jsx
 npm install --save-dev puppeteer
@@ -199,3 +202,117 @@ test("should create an element with text and correct class", async () => {
 💡 **Async/await** and **then()** are very similar. The difference is that in an async function, JavaScript will pause the function execution until the promise settles. With then() , the rest of the function will continue to execute but JavaScript won't execute the . then() callback until the promise settles
 
 </aside>
+
+# React Testing Library
+
+[https://testing-library.com/docs/react-testing-library/intro/](https://testing-library.com/docs/react-testing-library/intro/)
+
+Testing library build on top of **Jest**
+
+**Testing**
+
+-   Test Block
+    1. Render a component we want to test
+    2. FInd element we want to interact with
+    3. Interact with those elements
+    4. Assert that the result are as expected
+-   Describe Block is method to group common tests - better way of organizing our tests
+    1. Test Block
+    2. Test Block
+    3. Test Block
+
+![Untitled](Testing%20bafbf97940e8410aa5f271dfcc829008/Untitled.png)
+
+**Priority**
+
+![Untitled](Testing%20bafbf97940e8410aa5f271dfcc829008/Untitled%201.png)
+
+<aside>
+💡 One assertion per test
+
+</aside>
+
+## FireEvents
+
+```jsx
+import { render, screen, fireEvent } from "@testing-library/react";
+import AddInput from "../AddInput";
+
+const mockedSetTodo = jest.fn(); // Mock function
+
+it("should have empty input when add button is clicked", () => {
+    render(<AddInput todos={[]} setTodos={mockedSetTodo} />);
+    const inputElement = screen.getByPlaceholderText("Add a new task here...");
+    const buttonElement = screen.getByRole("button", { name: /Add/i });
+    fireEvent.change(inputElement, { target: { value: "Go Grocery Shopping" } }); // Change input target text value to String
+    fireEvent.click(buttonElement); // Click the button
+    expect(inputElement.value).toBe(""); // When the button is clicked, value of input should be ("")
+});
+```
+
+### Link problem can be fixed with Mock component
+
+```jsx
+// Mock todo with browser router fixes the problem with the Link
+const MockTodo = () => {
+    return (
+        <BrowserRouter>
+            <Todo />
+        </BrowserRouter>
+    );
+};
+```
+
+## Better approach of testing requests
+
+This approach is **bad/worse** practise. Because:
+
+-   Requests **Cost Money**
+-   Requests Are **Slow**
+-   Out Tests **Dependent on Something External**
+
+```jsx
+...
+it("should render 5 followers", async () => {
+      render(<MockFollowerList />);
+      const followerDivElement = await screen.findAllByTestId(/follower-item/i); // Regex for follower-item-0,1,2...
+      expect(followerDivElement.length).toBe(5);
+});
+...
+```
+
+Better approach: **Mocking Requests**
+
+[https://www.youtube.com/watch?v=TBZy-Rc-xX0&list=PL4cUxeGkcC9gm4\_-5UsNmLqMosM-dzuvQ&index=13](https://www.youtube.com/watch?v=TBZy-Rc-xX0&list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ&index=13)
+
+-   create directory in src > “**mocks**” > axios.js
+-   mock the response
+
+```jsx
+const mockResponse = {
+    data: {
+        results: [
+            {
+                name: {
+                    first: "Laith",
+                    last: "Harb",
+                },
+                picture: {
+                    large: "https://randomuser.me/api/portraits/men/0.jpg",
+                },
+                login: {
+                    username: "TheJestGOAT",
+                },
+            },
+        ],
+    },
+};
+
+export default {
+    get: jest.fn().mockResolvedValue(mockResponse),
+};
+```
+
+-   go to node*modules > react-scripts > scripts > utils > createJestConfig.js > line 69 > \_false*
+
+## Before & After Each
