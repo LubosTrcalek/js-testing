@@ -8,11 +8,11 @@ Jest, Cypress, Puppeteer.
 
 1. _JSTesting\test-demo_
     1. [Test-Driven Development // Fun TDD Introduction with JavaScript -- Fireship](https://www.youtube.com/watch?v=Jv2uxzhPFl4)
-2. ******\*\*\*\*******\*******\*\*\*\*******JSTesting\jest-testing******\*\*\*\*******\*******\*\*\*\*******
+2. _JSTesting\jest-testing_
     1. [Introduction To Testing In JavaScript With Jest -- Web Dev Simplified](https://www.youtube.com/watch?v=FgnxcUQ5vho)
-3. ******\*\*\*\*******\*******\*\*\*\*******JSTesting\js-testing-introduction******\*\*\*\*******\*******\*\*\*\*******
+3. _JSTesting\js-testing-introduction_
     1. [JavaScript Testing Introduction Tutorial - Unit Tests, Integration Tests & e2e Tests](https://www.youtube.com/watch?v=r9HdJ8P6GQI)
-4. _JSTesting\React-Testing-Library-Net-Ninja_
+4. _JSTesting\react-testing-library-NetNinja_
     1. [React Testing Library Tutorial - The Net Ninja](https://www.youtube.com/watch?v=7dTTFW7yACQ&list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ)
 
 ## Why Tes**t?**
