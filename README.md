@@ -33,7 +33,7 @@ Jest, Cypress, Puppeteer.
 
 [https://docs.expo.dev/guides/testing-with-jest/](https://docs.expo.dev/guides/testing-with-jest/)
 
--   Jest is **extremely popular** and **\*\***\*\*\*\***\*\***powerful**\*\***\*\*\*\***\*\*** testing framework for javascript
+-   Jest is **extremely popular** and **powerful** testing framework for javascript
     -   because it is also **test runner (e.g. Mocha)** and has assertation libary **(e.g. Chai) in ONE testing framework**
     -   really powerful and fun to work with
 
@@ -60,7 +60,7 @@ Error → Passed → Refactor/optimize
 -   result of a function depends on another function
 -   e.g. techs: **Jest,** Chai, …
 
-**End-to-End Testing (best one probably)** - complex - write a few of these
+**End-to-End Testing** - complex - write a few of these
 
 -   full flow
     -   validating the DOM after a click
@@ -91,7 +91,7 @@ npm install --save-dev jest // only in development dependencies of our project
 
 **Jest**
 
--   watchwatchAll
+-   watchAll
     -   Watch files for changes and rerun all tests when something changes
 -   watch
     -   If you want to re-run only the tests that depend on the changed files
@@ -135,7 +135,7 @@ class Stack(){
 
 // Alternative
 test('creates empty stack', () => { // Test Suite
-	epexct(stack.top).toBe(-1); // Assertion
+	expect(stack.top).toBe(-1); // Assertion
 });
 
 // Test suite - Describe Blocks
@@ -145,9 +145,9 @@ describe('My Stack', () => {
 	let stack;
 
 	/**
-   * Before every new test, create new Stack instance.
-   * Better than initiating in every test.
-   */
+	* Before every new test, create new Stack instance.
+	* Better than initiating in every test.
+	*/	
 	beforeEach(() => {
 		stack = new Stack();
 	});
@@ -165,7 +165,7 @@ describe('My Stack', () => {
 npm test
 ```
 
-**\*\***\*\***\*\***Cypress**\*\***\*\***\*\***
+**Cypress**
 
 -   End-to-End visual testing
 -   Behaves like an end user.
@@ -173,6 +173,7 @@ npm test
 **Puppeteer**
 
 -   e2e testing
+-   similar to Cypress
 -   headless version of chrome browser
 
 ```jsx
@@ -180,6 +181,7 @@ npm install --save-dev puppeteer
 ```
 
 ```jsx
+// Puppeteer example
 test("should create an element with text and correct class", async () => {
     const browser = await puppeteer.launch({
         headless: false,
@@ -199,7 +201,7 @@ test("should create an element with text and correct class", async () => {
 ```
 
 <aside>
-💡 **Async/await** and **then()** are very similar. The difference is that in an async function, JavaScript will pause the function execution until the promise settles. With then() , the rest of the function will continue to execute but JavaScript won't execute the . then() callback until the promise settles
+💡 Async/await and then() are very similar. The difference is that in an async function, JavaScript will pause the function execution until the promise settles. With then() , the rest of the function will continue to execute but JavaScript won't execute the . then() callback until the promise settles
 
 </aside>
 
@@ -272,6 +274,7 @@ This approach is **bad/worse** practise. Because:
 -   Out Tests **Dependent on Something External**
 
 ```jsx
+// there is real API call used in MockFollowerList 
 ...
 it("should render 5 followers", async () => {
       render(<MockFollowerList />);
@@ -313,6 +316,6 @@ export default {
 };
 ```
 
--   go to node*modules > react-scripts > scripts > utils > createJestConfig.js > line 69 > \_false*
+-   go to node*modules > react-scripts > scripts > utils > createJestConfig.js > line 69 > **false**
 
 ## Before & After Each
