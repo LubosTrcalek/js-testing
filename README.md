@@ -143,9 +143,9 @@ describe('My Stack', () => {
 	let stack;
 
 	/**
-   * Before every new test, create new Stack instance.
-   * Better than initiating in every test.
-   */
+	* Before every new test, create new Stack instance.
+	* Better than initiating in every test.
+	*/	
 	beforeEach(() => {
 		stack = new Stack();
 	});
@@ -163,7 +163,7 @@ describe('My Stack', () => {
 npm test
 ```
 
-**\*\***\*\***\*\***Cypress**\*\***\*\***\*\***
+**Cypress**
 
 -   End-to-End visual testing
 -   Behaves like an end user.
