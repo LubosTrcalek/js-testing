@@ -1,19 +1,17 @@
-# js-testing
-
-Jest, Cypress, Puppeteer.
-
 # Testing
 
 **PROJECTS:**
 
 1. _JSTesting\test-demo_
     1. [Test-Driven Development // Fun TDD Introduction with JavaScript -- Fireship](https://www.youtube.com/watch?v=Jv2uxzhPFl4)
-2. ******\*\*\*\*******\*******\*\*\*\*******JSTesting\jest-testing******\*\*\*\*******\*******\*\*\*\*******
+2. _JSTesting\jest-testing_
     1. [Introduction To Testing In JavaScript With Jest -- Web Dev Simplified](https://www.youtube.com/watch?v=FgnxcUQ5vho)
-3. ******\*\*\*\*******\*******\*\*\*\*******JSTesting\js-testing-introduction******\*\*\*\*******\*******\*\*\*\*******
+3. _JSTesting\js-testing-introduction_
     1. [JavaScript Testing Introduction Tutorial - Unit Tests, Integration Tests & e2e Tests](https://www.youtube.com/watch?v=r9HdJ8P6GQI)
 4. _JSTesting\React-Testing-Library-Net-Ninja_
     1. [React Testing Library Tutorial - The Net Ninja](https://www.youtube.com/watch?v=7dTTFW7yACQ&list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ)
+5. _JSTesting\react-testing-starter-cypress_
+    1. [React Testing Crash Course - Traversy Media](https://www.youtube.com/watch?v=OVNjsIto9xM&t=2817s)
 
 ## Why Tes**t?**
 
@@ -33,7 +31,7 @@ Jest, Cypress, Puppeteer.
 
 [https://docs.expo.dev/guides/testing-with-jest/](https://docs.expo.dev/guides/testing-with-jest/)
 
--   Jest is **extremely popular** and **\*\***\*\*\*\***\*\***powerful**\*\***\*\*\*\***\*\*** testing framework for javascript
+-   Jest is **extremely popular** and **powerful** testing framework for javascript
     -   because it is also **test runner (e.g. Mocha)** and has assertation libary **(e.g. Chai) in ONE testing framework**
     -   really powerful and fun to work with
 
@@ -60,7 +58,7 @@ Error → Passed → Refactor/optimize
 -   result of a function depends on another function
 -   e.g. techs: **Jest,** Chai, …
 
-**End-to-End Testing (best one probably)** - complex - write a few of these
+**End-to-End Testing** - complex - write a few of these
 
 -   full flow
     -   validating the DOM after a click
@@ -75,7 +73,7 @@ Error → Passed → Refactor/optimize
 -   Security
 -   Stress testing
 
-### Question: Implement a STACK without using a JS array
+### **Question**: Implement a STACK without using a JS array
 
 -   Tech: **Vitejs, Cypress, Jest**
 
@@ -91,7 +89,7 @@ npm install --save-dev jest // only in development dependencies of our project
 
 **Jest**
 
--   watchwatchAll
+-   watchAll
     -   Watch files for changes and rerun all tests when something changes
 -   watch
     -   If you want to re-run only the tests that depend on the changed files
@@ -135,7 +133,7 @@ class Stack(){
 
 // Alternative
 test('creates empty stack', () => { // Test Suite
-	epexct(stack.top).toBe(-1); // Assertion
+	expect(stack.top).toBe(-1); // Assertion
 });
 
 // Test suite - Describe Blocks
@@ -173,6 +171,7 @@ npm test
 **Puppeteer**
 
 -   e2e testing
+-   similar to Cypress
 -   headless version of chrome browser
 
 ```jsx
@@ -180,6 +179,7 @@ npm install --save-dev puppeteer
 ```
 
 ```jsx
+// Puppeteer example
 test("should create an element with text and correct class", async () => {
     const browser = await puppeteer.launch({
         headless: false,
@@ -199,7 +199,7 @@ test("should create an element with text and correct class", async () => {
 ```
 
 <aside>
-💡 **Async/await** and **then()** are very similar. The difference is that in an async function, JavaScript will pause the function execution until the promise settles. With then() , the rest of the function will continue to execute but JavaScript won't execute the . then() callback until the promise settles
+💡 Async/await and then() are very similar. The difference is that in an async function, JavaScript will pause the function execution until the promise settles. With then() , the rest of the function will continue to execute but JavaScript won't execute the . then() callback until the promise settles
 
 </aside>
 
@@ -221,14 +221,8 @@ Testing library build on top of **Jest**
     2. Test Block
     3. Test Block
 
-![Untitled](Testing%20bafbf97940e8410aa5f271dfcc829008/Untitled.png)
-
-**Priority**
-
-![Untitled](Testing%20bafbf97940e8410aa5f271dfcc829008/Untitled%201.png)
-
 <aside>
-💡 One assertion per test
+💡 One assertion per test is good practise
 
 </aside>
 
@@ -272,6 +266,7 @@ This approach is **bad/worse** practise. Because:
 -   Out Tests **Dependent on Something External**
 
 ```jsx
+// There is real API call used in MockFollowerList > BAD practise
 ...
 it("should render 5 followers", async () => {
       render(<MockFollowerList />);
@@ -313,6 +308,77 @@ export default {
 };
 ```
 
--   go to node*modules > react-scripts > scripts > utils > createJestConfig.js > line 69 > \_false*
+-   go to node_modules > react-scripts > scripts > utils > createJestConfig.js > line 69 > **false**
 
 ## Before & After Each
+
+-   We can do something before and after each test
+-   Or with beforeAll() and afterAll() we can do something before all test and after all tests…
+
+---
+
+## **React Testing Crash Course**
+
+-   The app is self documented in the folder: **_react-testing-starter-cypress_**
+
+Query Priorities: (getBy vs findBy vs queryBy (queryBy should not by used anymore))
+
+[https://testing-library.com/docs/queries/about/#priority](https://testing-library.com/docs/queries/about/#priority)
+
+### End-to-end (E2E) tests. Cypress
+
+-   End-to-end test. E2E test
+-   Fun to write. Simluation is happenin on a screen.
+-   Tets that really matter. High value features.
+-   Tech: **Cypress**
+
+<aside>
+💡 Google Chrome Extension: Testing Playground > Suggests query if you hover on elements on page.
+
+</aside>
+
+## **Cypress**
+
+-   Cypress is using only findBy() function…
+
+When Cypress typings are not recognized > (cy. not recognized)
+
+[https://docs.cypress.io/guides/tooling/typescript-support](https://docs.cypress.io/guides/tooling/typescript-support)
+
+When cy.findBy… is not recognized
+
+[https://testing-library.com/docs/cypress-testing-library/intro/](https://testing-library.com/docs/cypress-testing-library/intro/)
+
+<aside>
+💡 Search by testID > Should be last reserve when nothing else can help >or when the content is dynamic
+
+</aside>
+
+**Cypress Assertions**
+
+-   e.g. cy.findByText(`-$${payAmount}`).should(’be.visible’);
+-   e.g. cy.findByText(note).should(’be.visible’);
+
+## **Set priorities**
+
+**E2E tests (e.g. cypress)**
+
+1. High value features
+
+**Integration/Unit tests (e.g. React Testing Library)**
+
+1. Edge cases in high value features
+2. Things that are easy to break
+3. Basic React component testing
+    1. User Interactions
+    2. Conditional rendering
+    3. Utils / Hooks
+
+---
+
+## LINKS
+
+1. _JestJS Testing Library:_ [https://jestjs.io/docs/getting-started](https://jestjs.io/docs/getting-started)
+2. _React Testing Library: Query Priorities:_ [https://testing-library.com/docs/queries/about/#priority](https://testing-library.com/docs/queries/about/#priority)
+3. _React Testing Library:_ [https://testing-library.com/docs/react-testing-library/intro/](https://testing-library.com/docs/react-testing-library/intro/)
+4. _React Testing Library > Cypress:_ [https://testing-library.com/docs/cypress-testing-library/intro/](https://testing-library.com/docs/cypress-testing-library/intro/)
